@@ -23,7 +23,6 @@ char get_char(){
 }
 char *get_string_EOF(){
     char a;
-    char *x = malloc(1024);
     
     int i =0;
     a = getchar();
@@ -33,8 +32,8 @@ char *get_string_EOF(){
         a = getchar();
     }
     s[i] = '\0';
-    strcpy(x, s);
-    return x;
+
+    return s;
 }
 char *get_string_NL(){
     char a;
@@ -44,6 +43,7 @@ char *get_string_NL(){
     while(a!= '\n'){
         snl[i] = a;
         i++;
+        a = getchar();
     }
     snl[i]='\0';
     return snl;
