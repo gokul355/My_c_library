@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 char s[] = {};
 char snl[]={};
 int getint;
@@ -19,23 +21,30 @@ char get_char(){
     scanf("%c",&gech);
     return gech;
 }
-char* get_string_EOF(){
+char *get_string_EOF(){
     char a;
+    char *x = malloc(1024);
     
     int i =0;
-    while((a = getchar()!=EOF)){
+    a = getchar();
+    while(a!=EOF){
         s[i] = a;
         i++;
+        a = getchar();
     }
-    return (char *)s;
+    s[i] = '\0';
+    strcpy(x, s);
+    return x;
 }
-char* get_string_NL(){
+char *get_string_NL(){
     char a;
     
     int i =0;
-    while((a = getchar()!= '\n')){
+    a = getchar();
+    while(a!= '\n'){
         snl[i] = a;
         i++;
     }
-    return (char *)snl;
+    snl[i]='\0';
+    return snl;
 }
