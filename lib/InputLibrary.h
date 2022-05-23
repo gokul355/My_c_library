@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
 char s[] = {};
 char snl[]={};
 int getint;
@@ -13,7 +11,7 @@ int get_int(){
 }
 int get_float(){
     
-    scanf("%d",&getfloat);
+    scanf("%f",&getfloat);
     return getfloat;
 }
 char get_char(){
