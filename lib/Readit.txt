@@ -1,9 +1,10 @@
 Hi there,
 Available functions are 
         1)get_int()
-        2)get_char()
-        3)get_string_EOF()
-        4)get_string_NL
+        2)get_float()
+        3)get_char()
+        4)get_string_EOF()
+        5)get_string_NL()
 
 1)get_int:
     It just accepts an integer from the user in runtime and allocates to the variable that you have created
